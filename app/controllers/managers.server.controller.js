@@ -21,6 +21,14 @@ exports.listPubQuizzes = function(req, res) {
 	res.json(pubQuizzes);
 };
 
+exports.getQuestion = function(req, res) {
+	
+};
+
+exports.postQuestion = function(req, res) {
+	
+};
+
 /**
  * Create a Manager
  */
