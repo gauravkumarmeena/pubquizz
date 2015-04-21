@@ -10,12 +10,25 @@ var mongoose = require('mongoose'),
 
 exports.listPubQuizzes = function(req, res) {
 	var pubQuizzes = [
-        {    'test': 'Which pop duo was the first western band to play in The Peoples Republic of China?',
-            'choices':['Wham','Simon and Garfunkel','Chas and Dave','Right Said Fred']
+        {   'id':'1',
+            'test': 'Which pop duo was the first western band to play in The Peoples Republic of China?',
+            'choices':[{'id':'1','value':'Wham'},{'id':'2','value':'Simon and Garfunkel'},{'id':'3','value':'Chas and Dave'},{'id':'4','value':'Right Said Fred'}]
 		},
-		{
+		{'id':'2',
                     'test': 'Timber selected from how many fully grown oak trees were needed to build a large 3 decker Royal Navy battle ship in the 18th century?',
-                    'choices':['50','500','1,500','3,500']
+                    'choices':[{'id':'1','value':'50'},{'id':'2','value':'500'},{'id':'3','value':'1,500'},{'id':'4','value':'3,500'}]
+        },
+        {'id':'3',
+                    'test': 'Speed skating originated in which country?',
+                    'choices':[{'id':'1','value':'Russia '},{'id':'2','value':'Netherlands'},{'id':'3','value':'Canada'},{'id':'4','value':'Norway'}]
+        },
+        {'id':'4',
+                    'test': 'Off the coast of which country did the Amoco Cadiz sink?',
+                     'choices':[{'id':'1','value':'South Africa '},{'id':'2','value':'France'},{'id':'3','value':'USA'},{'id':'4','value':'Spain'}]
+        },
+        {'id':'5',
+                            'test': 'The song &#039;An Englishman in New York&#039; was about which man?',
+                             'choices':[{'id':'1','value':'Quentin Crisp'},{'id':'2','value':'Sting'},{'id':'3','value':'John Lennon'},{'id':'4','value':'Gordon Sumner '}]
         }
 		];
 	res.json(pubQuizzes);
