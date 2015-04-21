@@ -4,8 +4,8 @@
 angular.module('punters').run(['Menus',
 	function(Menus) {
 		// Set top bar menu items
-		Menus.addMenuItem('Punter', 'Punters', 'punters', 'dropdown', '/punters(/create)?');
-		Menus.addSubMenuItem('Punter', 'punters', 'List Punters', 'punters');
-		Menus.addSubMenuItem('Punter', 'punters', 'New Punter', 'punters/create');
+		Menus.addMenuItem('topbar', 'Punters', 'punters', 'dropdown', '/punters(/create)?');
+		Menus.addSubMenuItem('topbar', 'punters', 'List Punters', 'punters');
+		Menus.addSubMenuItem('topbar', 'punters', 'New Punter', 'punters/create');
 	}
 ]);
