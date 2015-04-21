@@ -5,7 +5,11 @@ module.exports = function(app) {
 	var managers = require('../../app/controllers/managers.server.controller');
 
 	app.route('/pubquizzes')
-		.get(managers.listPubQuizzes)
+		.get(managers.listPubQuizzes);
+		
+	app.route('/question')
+		.get(managers.getQuestion)
+		.post(managers.postQuestion);
 
 	// Managers Routes
 	app.route('/managers')
