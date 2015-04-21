@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/pubquizz-dev',
+	db: 'mongodb://pubquizz:dbpassword@ds039281.mongolab.com:39281/heroku_app34546832',
 	app: {
 		title: 'pubquizz - Development Environment'
 	},
