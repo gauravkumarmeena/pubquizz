@@ -10,7 +10,13 @@ var mongoose = require('mongoose'),
 
 exports.listPubQuizzes = function(req, res) {
 	var pubQuizzes = [
-		{}
+        {    'test': 'Which pop duo was the first western band to play in The Peoples Republic of China?',
+            'choices':['Wham','Simon and Garfunkel','Chas and Dave','Right Said Fred']
+		},
+		{
+                    'test': 'Timber selected from how many fully grown oak trees were needed to build a large 3 decker Royal Navy battle ship in the 18th century?',
+                    'choices':['50','500','1,500','3,500']
+        }
 		];
 	res.json(pubQuizzes);
 };
