@@ -1,8 +1,8 @@
 'use strict';
 
 // Punters controller
-angular.module('punters').controller('PuntersController', ['$window', '$http', '$scope', '$stateParams', '$location', 'Authentication', 'Punters',
-	function($window, $http, $scope, $stateParams, $location, Authentication, Punters) {
+angular.module('punters').controller('PuntersController', ['$timeout', '$http', '$scope', '$stateParams', '$location', 'Authentication', 'Punters',
+	function($timeout, $http, $scope, $stateParams, $location, Authentication, Punters) {
 		$scope.authentication = Authentication;
 
 		$scope.question = {};
@@ -17,9 +17,9 @@ angular.module('punters').controller('PuntersController', ['$window', '$http', '
 				.then(function(response) {
 					$scope.question = response.data;
 				});
-			$window.timeout(function() {
+			$timeout(function() {
 				$scope.fetchQuestion();
-			}, 2000);
+			}, 1000);
 		};
 	}
 ]);

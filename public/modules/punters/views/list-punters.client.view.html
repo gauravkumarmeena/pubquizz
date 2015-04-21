@@ -10,12 +10,17 @@
                         {{question.test}}
                     </div>
                     <div class="col-xs-12" data-ng-repeat="choice in question.choices">
-                        <input type="radio">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" ng-value="question.id">
+                            {{choice.value}}
+                          </label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-3 col-xs-offset-9">
-                        <button class="btn btn-primary">Validate</button>
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <button class="btn btn-primary btn-block">Validate</button>
                     </div>
                 </div>
             </div>
