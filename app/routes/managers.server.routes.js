@@ -4,6 +4,9 @@ module.exports = function(app) {
 	var users = require('../../app/controllers/users.server.controller');
 	var managers = require('../../app/controllers/managers.server.controller');
 
+	app.route('/pubquizzes')
+		.get(managers.listPubQuizzes)
+
 	// Managers Routes
 	app.route('/managers')
 		.get(managers.list)

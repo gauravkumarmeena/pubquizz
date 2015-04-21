@@ -8,6 +8,13 @@ var mongoose = require('mongoose'),
 	Manager = mongoose.model('Manager'),
 	_ = require('lodash');
 
+exports.listPubQuizzes = function(req, res) {
+	var pubQuizzes = [
+		{}
+		];
+	res.json(pubQuizzes);
+};
+
 /**
  * Create a Manager
  */
