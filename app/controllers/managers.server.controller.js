@@ -21,12 +21,15 @@ exports.listPubQuizzes = function(req, res) {
 	res.json(pubQuizzes);
 };
 
+var question = {};
+
 exports.getQuestion = function(req, res) {
-	
+	res.json(question);
 };
 
 exports.postQuestion = function(req, res) {
-	
+	question = req.body;
+	res.json({});
 };
 
 /**
