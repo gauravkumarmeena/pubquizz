@@ -1,0 +1,19 @@
+<section data-ng-controller="PuntersController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Punters</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="punter in punters" data-ng-href="#!/punters/{{punter._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="punter.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="punter.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="punter.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!punters.$resolved || punters.length">
+    	No Punters yet, why don't you <a href="/#!/punters/create">create one</a>?
+    </div>
+</section>
